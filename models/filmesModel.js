@@ -1,36 +1,47 @@
-module.exports = (sequelize, dataTypes) => {
-    const filme = sequelize.define('filme', {
+module.exports = (sequelize, DataTypes) => {
+    const Filme = sequelize.define('Filme', {
         filme_id:{
-            type:dataTypes.INTEGER,
+            type:DataTypes.INTEGER,
             primaryKey:true,
             autoIncrement:true
         },
-        titulo:dataTypes.STRING,
+        titulo:DataTypes.STRING,
         descricao:{
-            type:dataTypes.STRING,
+            type:DataTypes.STRING,
             allownNull:true
         },
         ano_de_lancamento:{
-            type:dataTypes.DATE
+            type:DataTypes.DATE,
+            allownNull:true
         },
         indioma_id:{
-            type:dataTypes.INTEGER
+            type:DataTypes.INTEGER,
+            allownNull:true
         },
         indioma_original_id:{
-            type:dataTypes.INTEGER
+            type:DataTypes.INTEGER,
+            allownNull:true
         },
         duracao_da_locacao:{
-            type:dataTypes.INTEGER
+            type:DataTypes.INTEGER
         },
         preco_da_locacao:{
-            type:dataTypes.DECIMAL(4,2)
+            type:DataTypes.DECIMAL(4,2)
         },
-        duracao_do_filme:dataTypes.INTEGER,
-        custo_de_substituicao:dataTypes.DECIMAL(5,2),
-        classificacao:dataTypes.STRING,
-        recursos_especiais:dataTypes.STRING
+        duracao_do_filme:{
+            type:DataTypes.INTEGER, 
+            allownNull:true 
+        },
+        custo_de_substituicao:DataTypes.DECIMAL(5,2),
+        classificacao:{
+            type:DataTypes.STRING, 
+            allownNull:true 
+        },
+        recursos_especiais:{
+            type:DataTypes.STRING, 
+            allownNull:true 
+        }
         
-
     },{
         tableName:'filme'
         //estrutura necessária quando não existe o campo timestamp na tabela

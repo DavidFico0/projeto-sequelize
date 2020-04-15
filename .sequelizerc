@@ -5,3 +5,8 @@ module.exports = {
     'models': path.resolve('models')
 }
 
+// module.exports = {
+//     config: path.resolve(__dirname, 'config', 'database.js'),
+//     "migrations-path":path.resolve(__dirname, 'database', 'migration'), 
+//     "models-path":path.resolve(__dirname, 'models')
+// }
