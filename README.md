@@ -13,3 +13,6 @@ npm install sequelize-cli
 
 //instalar o mysql
 npm install mysql2
+
+//criando a pasta models
+npx sequelize init:models
